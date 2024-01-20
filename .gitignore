@@ -1,0 +1,11 @@
+# Jetbrains IDE
+
+/.idea
+/.idea_modules
+.idea/
+.DS_Store
+.DS_Store?
+*.DS_Store
+__pycache__/
+*.py[cod]
+*.pytest_cache
