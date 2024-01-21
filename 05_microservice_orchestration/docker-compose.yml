@@ -1,6 +1,33 @@
 version: '3'
 
 services:
+  order:
+    image: order:0.0.1
+    ports:
+      - "8004:8004"
+    networks:
+      - my_network
+
+  stock:
+    image: stock:0.0.1
+    ports:
+      - "8002:8002"
+    networks:
+      - my_network
+
+  payment:
+    image: payment:0.0.1
+    ports:
+      - "8003:8003"
+    networks:
+      - my_network
+
+  deliver:
+    image: deliver:0.0.1
+    ports:
+      - "8001:8001"
+    networks:
+      - my_network
 
 networks:
   my_network:
