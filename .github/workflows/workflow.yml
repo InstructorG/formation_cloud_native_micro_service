@@ -6,7 +6,7 @@ on:
       - '*'
 
 jobs:
-  build-and-push:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,10 +27,13 @@ jobs:
       run: |
         pytest 01_monolithe/tests
 
+
     - name: Build Docker image
       run: |
         cd 04_microservice_conteneur && docker build -t  ttl.sh/microservice:latest .
 
+  li:
     - name: Push to Docker registry
       run: |
         docker push ttl.sh/microservice:latest
+
