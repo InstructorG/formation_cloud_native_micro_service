@@ -12,3 +12,24 @@
 4. Quelles sont les particularités de l'API du microservice ?
 
 5. Comment le stockage est-il géré dans ce microservice ?
+
+
+
+
+1 - Créer un dossier de migrations avec alembic
+
+```bash
+alembic init migrations
+```
+
+2 - Créer une premiere migration
+
+```bash
+PYTHONPATH=`pwd` alembic revision --autogenerate -m "Initial migration"
+```
+
+3 - Executer la migration 
+
+```bash
+PYTHONPATH=`pwd` alembic upgrade heads
+```

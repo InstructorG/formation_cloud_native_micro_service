@@ -29,7 +29,7 @@ class Service:
                 available_items[f"{item.name}_{item.type}"] = item
                 break
 
-        # 3 - Verifie si le produit est disponible dans la marketplace
+
         order.check_if_all_items_are_available(items, available_items)
 
         for key, item in available_items.items():
@@ -38,7 +38,7 @@ class Service:
         # 3 - Stockage de la commande
         COMMANDS[order.id] = order
 
-        return {"message": "La commande est créé", "order": order.dict()}
+        return {"message": "La commande est créée", "order": order.dict()}
 
     def check_if_item_is_available(self, stock, item) -> StockItem:
         for stock_item in stock.get("items"):

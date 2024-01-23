@@ -51,7 +51,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OrderSchema'
         '409':
-          $ref: '#/components/responses/NotFoundEntity'
+          $ref: '#/components/responses/NotFound'
 
   /orders/{order_id}:
     parameters:

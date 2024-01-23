@@ -10,7 +10,7 @@
 raise Exception({"status": "failed", "message": f"Les produits suivants ne sont pas disponibles : {not_available_items}"})
 ```
 
-Vérifiez que les tests sont réussis avec la commande suivante :
+Vérifiez que les tests sont réussis a+vec la commande suivante :
 
 ```bash
 pytest 01_monolithe/tests

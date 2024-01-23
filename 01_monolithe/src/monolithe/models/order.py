@@ -34,6 +34,9 @@ class Order:
 
         if not_available_items.__len__() > 0:
             # Remplacer le code à ce niveau
+            raise Exception({"status": "failed",
+                             "message": f"Les produits suivants ne sont pas disponibles : {not_available_items}"})
+
             print(f"Les produits suivants ne sont pas disponibles : {not_available_items}")
 
     def _init_stock(self):
