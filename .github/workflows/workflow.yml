@@ -36,8 +36,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Push to Docker registry
-          run: |
-            docker push ttl.sh/microservice:latest
+    - name: Push to Docker registry
+      run: |
+        docker push ttl.sh/microservice:latest
 
 
