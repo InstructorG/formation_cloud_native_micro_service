@@ -28,14 +28,19 @@ jobs:
         pytest 01_monolithe/tests
 
 
+  li:
+    runs-on: ubuntu-latest
+    needs: ci
+
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
     - name: Build Docker image
       run: |
         cd 04_microservice_conteneur && docker build -t  ttl.sh/microservice:latest .
 
-  li:
-    runs-on: ubuntu-latest
-
-    steps:
     - name: Push to Docker registry
       run: |
         docker push ttl.sh/microservice:latest

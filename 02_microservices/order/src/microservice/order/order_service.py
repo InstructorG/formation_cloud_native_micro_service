@@ -18,6 +18,8 @@ class OrderService:
 
         # 3 - Ajout des produits disponibles à la commande
         if not_available_items.__len__() > 0:
+            raise Exception({"status": "failed",
+                             "message": f"Les produits suivants ne sont pas disponibles : {not_available_items}"})
             print(f"The following products are not available : {not_available_items}")
 
         # 3 - Ajout des produits disponibles à la commande
